@@ -1,0 +1,11 @@
+---
+name: Build custom lily58
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      shield: '["lily58_left","lily58_right"]'
+      branches: '["AMikio/zmk/main"]'
