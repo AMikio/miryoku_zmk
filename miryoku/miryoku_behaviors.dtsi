@@ -17,11 +17,5 @@
       flavor = "tap-preferred";
       bindings = <&mo>, <&kp>;
     };
-    bspc_del: backspace_delete {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp BACKSPACE>, <&kp DELETE>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
   };
 };
