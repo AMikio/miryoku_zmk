@@ -23,11 +23,5 @@
       bindings = <&kp BACKSPACE>, <&kp DELETE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    dt_esc: dt_esc_to_base_layer {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>;
-      tapping-term-ms = <U_TAPPING_TERM>;
-      bindings = <&kp ESC>, <&to U_BASE>;
-    };
   };
 };
