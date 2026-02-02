@@ -2,7 +2,19 @@
 name: Build custom corne nice_nano_v2 nice_view
 on: workflow_dispatch
 jobs:
+  configure:
+    runs-on: ubuntu-latest
+    outputs:
+      kconfig: ${{ steps.read-kconfig.outputs.kconf_string }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Read platform from config file and set output
+        id: read-kconfig
+        run: |
+          printf %s "kconf_string=[\"$(sed -z -e "s/\n/\\\n/g" -e "s/\"/\\\\\"/g" -e "s/'/\\\'/g" config/corne.conf)\"]" >> $GITHUB_OUTPUT
   build:
+    needs: configure
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
@@ -10,3 +22,5 @@ jobs:
       shield: '["corne_left nice_view_adapter nice_view","corne_right nice_view_adapter
         nice_view"]'
       branches: '["AMikio/zmk/main"]'
+      kconfig: >-
+        ${{ needs.configure.outputs.kconfig }}
