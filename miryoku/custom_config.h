@@ -101,44 +101,44 @@
 
 #define XXX &none
 
-#define MIRYOKU_LAYERMAPPING_BASE(                                            \
+#define MIRYOKU_LAYERMAPPING_BASE(                                             \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
-                  N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)          \
-   &kp ESC   &kp NUM_1   &kp NUM_2   &kp NUM_3   &kp NUM_4   &kp NUM_5                              &kp NUM_6   &kp NUM_7   &kp NUM_8   &kp NUM_9   &kp NUM_0  &kp C_MUTE     \
-   &kp U_PST K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp U_CPY K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   &kp U_UND K20         K21         K22         K23         K24        &kp U_UND       &kp U_RDO   K25         K26         K27         K28         K29        &kp U_RDO      \
+                N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
+   &kp ESC   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                 &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE     \
+   U_PST     K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   U_CPY     K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
+   U_UND     K20         K21         K22         K23         K24        U_UND               U_RDO   K25         K26         K27         K28         K29        U_RDO          \
                                      XXX         K32         K33        K34                   K35   K36         K37         XXX
 
-#define MIRYOKU_LAYERMAPPING_NUM(                                             \
+#define MIRYOKU_LAYERMAPPING_NUM(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
-    N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)                          \
-   &kp ESC     &kp NUM_1   &kp NUM_2   &kp NUM_3   &kp NUM_4   &kp NUM_5                            &kp NUM_6   &kp NUM_7   &kp NUM_8   &kp NUM_9   &kp NUM_0  &kp C_MUTE     \
-   &kp U_PST   K00         K01         K02         K03         K24                                  K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp U_CPY   K10         K11         K12         K13         K00                                  K04         K16         K17         K18         K19        &kp C_VOL_DN   \
-   &kp U_UND   K20         K21         K22         K23         K14        &kp U_UND     &kp U_RDO   K25         K26         K27         K28         K29        &kp U_RDO      \
+                N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
+   &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                               &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE     \
+   U_PST       K00         K01         K02         K03         K24                                  K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   U_CPY       K10         K11         K12         K13         K00                                  K04         K16         K17         K18         K19        &kp C_VOL_DN   \
+   U_UND       K20         K21         K22         K23         K14        U_UND             U_RDO   K25         K26         K27         K28         K29        U_RDO          \
                                        XXX         K33         K32        K34                 K35   K36         K37         XXX
 
-#define MIRYOKU_LAYERMAPPING_SYM(                                             \
+#define MIRYOKU_LAYERMAPPING_SYM(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
-    N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)                          \
-   &kp ESC     &kp NUM_1   &kp NUM_2   &kp NUM_3   &kp NUM_4   &kp NUM_5                            &kp NUM_6   &kp NUM_7   &kp NUM_8   &kp NUM_9   &kp NUM_0  &kp C_MUTE     \
-   &kp U_PST   K00         K01         K02         K03         K24                                  K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp U_CPY   K10         K11         K12         K13         K32                                  K33         K16         K17         K18         K19        &kp C_VOL_DN   \
-   &kp U_UND   K20         K21         K22         K23         K14       &kp U_UND      &kp U_RDO   K25         K26         K27         K28         K29        &kp U_RDO      \
+                N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
+   &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                               &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE     \
+   U_PST       K00         K01         K02         K03         K24                                  K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   U_CPY       K10         K11         K12         K13         K32                                  K33         K16         K17         K18         K19        &kp C_VOL_DN   \
+   U_UND       K20         K21         K22         K23         K14       U_UND              U_RDO   K25         K26         K27         K28         K29        U_RDO          \
                                        XXX         K32         K33       K34                  K35   K36         K37         XXX
 
-#define MIRYOKU_LAYERMAPPING_FUN(                                             \
+#define MIRYOKU_LAYERMAPPING_FUN(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
-    N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)                          \
-   &kp ESC     &kp NUM_1   &kp NUM_2   &kp NUM_3   &kp NUM_4   &kp NUM_5                            &kp NUM_6   &kp NUM_7   &kp NUM_8   &kp NUM_9   &kp NUM_0  &kp C_MUTE      \
-   &kp U_PST   K00         K01         K02         K03         K24                                  K05         K06         K07         K08         K09        &kp C_VOL_UP    \
-   &kp U_CPY   K10         K11         K12         K13         &kp LBRC                             &kp RBRC    K16         K17         K18         K19        &kp C_VOL_DN    \
-   &kp U_UND   K20         K21         K22         K23         K24      &kp U_UND       &kp U_RDO   K25         K26         K27         K28         K29        &kp U_RDO       \
+                N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
+   &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                               &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE      \
+   U_PST       K00         K01         K02         K03         K24                                  K05         K06         K07         K08         K09        &kp C_VOL_UP    \
+   U_CPY       K10         K11         K12         K13         &kp LBRC                             &kp RBRC    K16         K17         K18         K19        &kp C_VOL_DN    \
+   U_UND       K20         K21         K22         K23         K24      U_UND               U_RDO   K25         K26         K27         K28         K29        U_RDO           \
                                        XXX         K32         K33      K34                   K35   K36         K37         XXX
 
 #endif
