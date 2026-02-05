@@ -18,4 +18,22 @@
       bindings = <&mo>, <&kp>;
     };
   };
+    bspc_del: backspace_delete {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp BACKSPACE>, <&kp DELETE>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    dt_esc_game: dt_esc_to_game_layer {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp ESC>, <&to U_GAME>;
+    };
+    dt_esc_base: dt_esc_to_base_layer {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp ESC>, <&to U_BASE>;
+    };
 };
