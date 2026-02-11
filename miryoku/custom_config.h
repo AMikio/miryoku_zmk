@@ -23,8 +23,6 @@
       &kp BSLH, &kp F1, &kp F2, &kp F3, &kp GRAVE, U_NP, U_NP, &to U_BASE,     \
       &kp SPC, &none, &kp MINUS, &kp N0, &kp DOT, U_NP, U_NP
 
-#define MIRYOKU_LAYERMAPPING_GAMENUM MIRYOKU_MAPPING
-
 #define MIRYOKU_LAYER_LIST                                                     \
   MIRYOKU_X(BASE, "Base")                                                      \
   MIRYOKU_X(EXTRA, "Extra")                                                    \
@@ -101,8 +99,10 @@
   U_CPY        K20 K21 K22 K23 K24          K25 K26 K27 K28 K29 &kp C_MUTE        \
                        K32 K33 K34          K35 K36 K37
 
+#define MIRYOKU_LAYERMAPPING_GAMENUM MIRYOKU_MAPPING
+
 // clang format on
-//
+
 #endif
 
 #if defined(MIRYOKU_KEYBOARD_LILY58)
