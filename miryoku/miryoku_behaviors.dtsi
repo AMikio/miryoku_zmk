@@ -23,13 +23,6 @@
       bindings = <&kp BACKSPACE>, <&kp DELETE>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
-    lt_bspc_del: lt_bspc_del {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <1>;
-      tapping-term-ms = <U_TAPPING_TERM>;
-      flavor = "tap-preferred";
-      bindings = <&mo>, <&bspc_del>;
-    };
     dt_esc_game: dt_esc_to_game_layer {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;

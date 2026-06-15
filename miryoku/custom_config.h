@@ -118,7 +118,7 @@
    &kp PG_UP      K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
    &kp PG_DN      K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
    U_UND          K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
-                                          &kp HOME    K32         K33        K34                 K35     &lt_bspc_del U_SYM     K37         &kp END
+                                          &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
 
 #define MIRYOKU_LAYERMAPPING_NUM(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
