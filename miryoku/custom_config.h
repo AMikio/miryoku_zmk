@@ -5,6 +5,7 @@
 #define MIRYOKU_TAP_QWERTY
 #define MIRYOKU_EXTRA_QWERTY
 #define MIRYOKU_NAV_VI
+#define MIRYOKU_CLIPBOARD_WIN
 
 #define XXX &none
 
@@ -14,7 +15,7 @@
       &kp LSHFT, &kp A, &kp S, &kp D, &kp F, &kp H, &kp J, &kp K, &kp L,       \
       &kp SQT, &kp LCTRL, &kp Z, &kp X, &kp C, &kp V, &kp N, &kp M, &kp COMMA, \
       &kp DOT, &kp SLASH, U_NP, U_NP, &kp LALT, &kp SPC, &mo U_GAMENUM,        \
-      &kp RET, &kp BSPC, &kp DEL, U_NP, U_NP
+      &kp RET, &bspc_del, &kp DEL, U_NP, U_NP
 
 #define MIRYOKU_LAYER_GAMENUM                                                  \
   &kp ESC, &kp N1, &kp N2, &kp N3, &kp T, &kp LBKT, &kp F7, &kp F8, &kp F9,    \
@@ -101,7 +102,7 @@
 
 #define MIRYOKU_LAYERMAPPING_GAMENUM MIRYOKU_MAPPING
 
-// clang format on
+// clang-format on
 
 #endif
 
@@ -117,7 +118,7 @@
    &kp PG_UP      K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
    &kp PG_DN      K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
    U_UND          K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
-                                          &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
+                                          &kp HOME    K32         K33        K34                 K35     &lt_bspc_del U_SYM     K37         &kp END
 
 #define MIRYOKU_LAYERMAPPING_NUM(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
@@ -168,6 +169,23 @@
    &kp PG_DN      K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
    U_UND          K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
                                           &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
+
+#define MIRYOKU_LAYERMAPPING_STANDARD(                                         \
+    K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
+    K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
+                N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
+   XXX            XXX         XXX         XXX         XXX         XXX                                    XXX         XXX         XXX         XXX         XXX        &kp C_MUTE     \
+   &kp PG_UP      K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   &kp PG_DN      K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
+   U_UND          K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
+                                          &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
+
+#define MIRYOKU_LAYERMAPPING_EXTRA  MIRYOKU_LAYERMAPPING_STANDARD
+#define MIRYOKU_LAYERMAPPING_TAP    MIRYOKU_LAYERMAPPING_STANDARD
+#define MIRYOKU_LAYERMAPPING_BUTTON MIRYOKU_LAYERMAPPING_STANDARD
+#define MIRYOKU_LAYERMAPPING_NAV    MIRYOKU_LAYERMAPPING_STANDARD
+#define MIRYOKU_LAYERMAPPING_MOUSE  MIRYOKU_LAYERMAPPING_STANDARD
+#define MIRYOKU_LAYERMAPPING_MEDIA  MIRYOKU_LAYERMAPPING_STANDARD
 
 // clang-format on
 
