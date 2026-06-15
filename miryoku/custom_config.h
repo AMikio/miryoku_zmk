@@ -114,11 +114,11 @@
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
                 N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
-   &dt_esc_game   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                 &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE     \
-   &kp PG_UP      K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp PG_DN      K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   U_UND          K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
-                                          &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
+   &ht_to_kp U_GAME ESC   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                 &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE     \
+   &kp PG_UP              K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   &kp PG_DN              K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
+   U_UND                  K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
+                                                  &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
 
 #define MIRYOKU_LAYERMAPPING_NUM(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
@@ -154,21 +154,21 @@
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
                 N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
-   &dt_esc_base   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                 &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE     \
-   &kp PG_UP      K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp PG_DN      K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   U_UND          K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
-                                          &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
+   &ht_to_kp U_BASE ESC   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                                 &kp N6      &kp N7      &kp N8      &kp N9      &kp N0     &kp C_MUTE     \
+   &kp PG_UP              K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   &kp PG_DN              K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
+   U_UND                  K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
+                                                  &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
 
 #define MIRYOKU_LAYERMAPPING_GAMENUM(                                             \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
                 N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
-   &dt_esc_base   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                 &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp C_MUTE     \
-   &kp PG_UP      K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp PG_DN      K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   U_UND          K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
-                                          &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
+   &ht_to_kp U_BASE ESC   &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                                 &kp F6      &kp F7      &kp F8      &kp F9      &kp F10    &kp C_MUTE     \
+   &kp PG_UP              K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   &kp PG_DN              K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
+   U_UND                  K20         K21         K22         K23         K24        U_CPY             U_PST     K25         K26         K27         K28         K29        U_RDO          \
+                                                  &kp HOME    K32         K33        K34                 K35     K36         K37         &kp END
 
 #define MIRYOKU_LAYERMAPPING_STANDARD(                                         \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
