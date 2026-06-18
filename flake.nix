@@ -21,7 +21,6 @@
     devShells = forEachSupportedSystem ({pkgs}: let
       zmk-setup = pkgs.writeShellScriptBin "zmk-setup" ''
         set -e
-        : "''${ZMK_DIR:?ZMK_DIR is not set — export it to your ZMK source directory, e.g. export ZMK_DIR=~/zmk}"
         echo "Initialising west workspace in $ZMK_DIR ..."
         cd "$ZMK_DIR"
         west init -l app
@@ -29,15 +28,12 @@
         west zephyr-export
       '';
       zmk-clean = pkgs.writeShellScriptBin "zmk-clean" ''
-        : "''${ZMK_DIR:?ZMK_DIR is not set}"
         echo "Removing $ZMK_DIR/app/build ..."
         rm -rf "$ZMK_DIR/app/build"
         echo "Done."
       '';
       zmk-build = pkgs.writeShellScriptBin "zmk-build" ''
         set -e
-        : "''${ZMK_DIR:?ZMK_DIR is not set — export it to your ZMK source directory, e.g. export ZMK_DIR=~/zmk}"
-        : "''${ZMK_CONFIG:?ZMK_CONFIG is not set}"
         side=''${1:-left}
         echo "Building lily58_''${side} ..."
         cd "$ZMK_DIR/app"
@@ -74,11 +70,12 @@
         };
 
         shellHook = ''
+          export ZMK_DIR="''${ZMK_DIR:-$HOME/zmk}"
           export ZMK_CONFIG="''${ZMK_CONFIG:-$(realpath .)/config}"
 
           echo
           echo "ZMK build environment ready."
-          echo "  ZMK_DIR    = ''${ZMK_DIR:-(not set — export ZMK_DIR before building)}"
+          echo "  ZMK_DIR    = $ZMK_DIR"
           echo "  ZMK_CONFIG = $ZMK_CONFIG"
           echo
           echo "  zmk-setup               — one-time west workspace initialisation"
