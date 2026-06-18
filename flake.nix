@@ -44,13 +44,15 @@
       zmk-build = pkgs.writeShellScriptBin "zmk-build" ''
         set -e
         side=''${1:-left}
+        out_dir="$(pwd)"
         echo "Building lily58_''${side} ..."
         cd "$ZMK_DIR/app"
         west build --pristine -b nice_nano/nrf52840 -- \
           -DSHIELD="lily58_''${side}" \
           -DZMK_CONFIG="$ZMK_CONFIG" \
           -DDTS_EXTRA_CPPFLAGS="-DMIRYOKU_KEYBOARD_LILY58"
-        echo "Firmware: $ZMK_DIR/app/build/zephyr/zmk.uf2"
+        cp "$ZMK_DIR/app/build/zephyr/zmk.uf2" "$out_dir/lily58_''${side}.uf2"
+        echo "Firmware: $out_dir/lily58_''${side}.uf2"
       '';
     in {
       default = pkgs.mkShell {
