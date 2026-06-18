@@ -43,66 +43,17 @@
       bindings = <&to>, <&kp>;
     };
 
-    // Niri WM macros — send Hyper (Ctrl+Alt+Shift+Super) + Fx so they are
-    // safe (no-ops) on systems without explicit bindings.
-    niri_consume: niri_consume {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
+    // Single parameterised macro: sends Hyper (Ctrl+Alt+Shift+Super) + the
+    // given key. Safe on any system that doesn't explicitly bind Hyper combos.
+    niri_hyper: niri_hyper {
+      compatible = "zmk,behavior-macro-one-param";
+      #binding-cells = <1>;
       wait-ms = <0>;
       tap-ms = <0>;
       bindings
         = <&macro_press &kp LCTRL &kp LALT &kp LSHFT &kp LGUI>
-        , <&macro_tap &kp F1>
-        , <&macro_release &kp LGUI &kp LSHFT &kp LALT &kp LCTRL>;
-    };
-    niri_expel: niri_expel {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      wait-ms = <0>;
-      tap-ms = <0>;
-      bindings
-        = <&macro_press &kp LCTRL &kp LALT &kp LSHFT &kp LGUI>
-        , <&macro_tap &kp F2>
-        , <&macro_release &kp LGUI &kp LSHFT &kp LALT &kp LCTRL>;
-    };
-    niri_mon_next: niri_mon_next {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      wait-ms = <0>;
-      tap-ms = <0>;
-      bindings
-        = <&macro_press &kp LCTRL &kp LALT &kp LSHFT &kp LGUI>
-        , <&macro_tap &kp F3>
-        , <&macro_release &kp LGUI &kp LSHFT &kp LALT &kp LCTRL>;
-    };
-    niri_win_mon: niri_win_mon {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      wait-ms = <0>;
-      tap-ms = <0>;
-      bindings
-        = <&macro_press &kp LCTRL &kp LALT &kp LSHFT &kp LGUI>
-        , <&macro_tap &kp F4>
-        , <&macro_release &kp LGUI &kp LSHFT &kp LALT &kp LCTRL>;
-    };
-    niri_shrink: niri_shrink {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      wait-ms = <0>;
-      tap-ms = <0>;
-      bindings
-        = <&macro_press &kp LCTRL &kp LALT &kp LSHFT &kp LGUI>
-        , <&macro_tap &kp F5>
-        , <&macro_release &kp LGUI &kp LSHFT &kp LALT &kp LCTRL>;
-    };
-    niri_grow: niri_grow {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      wait-ms = <0>;
-      tap-ms = <0>;
-      bindings
-        = <&macro_press &kp LCTRL &kp LALT &kp LSHFT &kp LGUI>
-        , <&macro_tap &kp F6>
+        , <&macro_param_1to1>
+        , <&macro_tap &kp MACRO_PLACEHOLDER>
         , <&macro_release &kp LGUI &kp LSHFT &kp LALT &kp LCTRL>;
     };
   };

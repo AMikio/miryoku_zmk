@@ -110,26 +110,27 @@
 
 // clang-format off
 
-// Niri WM bindings — F13-F24 for workspaces/nav; Hyper+Fx macros for the rest.
-// All are safe (no-ops) on systems that don't explicitly bind them.
-#define NIRI_WS1      &kp LG(F13)
-#define NIRI_WS2      &kp LG(F14)
-#define NIRI_WS3      &kp LG(F15)
-#define NIRI_WS4      &kp LG(F16)
-#define NIRI_WS5      &kp LG(F17)
-#define NIRI_WS6      &kp LG(F18)
-#define NIRI_WS7      &kp LG(F19)
-#define NIRI_WS8      &kp LG(F20)
-#define NIRI_WS9      &kp LG(F21)
-#define NIRI_OVW      &kp LG(F22)
-#define NIRI_WS_PREV  &kp LG(F23)
-#define NIRI_WS_NEXT  &kp LG(F24)
-#define NIRI_COE_L    &niri_consume
-#define NIRI_COE_R    &niri_expel
-#define NIRI_MON_NEXT &niri_mon_next
-#define NIRI_WIN_MON  &niri_win_mon
-#define NIRI_SHRINK   &niri_shrink
-#define NIRI_GROW     &niri_grow
+// Niri WM bindings — all send Hyper (Ctrl+Alt+Shift+Super) + a regular key
+// via the niri_hyper parameterised macro. Regular keys are never XKB-remapped,
+// so these are safe (no-ops) on any system without explicit Hyper bindings.
+#define NIRI_WS1      &niri_hyper N1
+#define NIRI_WS2      &niri_hyper N2
+#define NIRI_WS3      &niri_hyper N3
+#define NIRI_WS4      &niri_hyper N4
+#define NIRI_WS5      &niri_hyper N5
+#define NIRI_WS6      &niri_hyper N6
+#define NIRI_WS7      &niri_hyper N7
+#define NIRI_WS8      &niri_hyper N8
+#define NIRI_WS9      &niri_hyper N9
+#define NIRI_OVW      &niri_hyper O
+#define NIRI_WS_PREV  &niri_hyper P
+#define NIRI_WS_NEXT  &niri_hyper N
+#define NIRI_COE_L    &niri_hyper F1
+#define NIRI_COE_R    &niri_hyper F2
+#define NIRI_MON_NEXT &niri_hyper F3
+#define NIRI_WIN_MON  &niri_hyper F4
+#define NIRI_SHRINK   &niri_hyper F5
+#define NIRI_GROW     &niri_hyper F6
 
 #define MIRYOKU_LAYERMAPPING_BASE(                                             \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
