@@ -51,10 +51,10 @@
       wait-ms = <0>;
       tap-ms = <0>;
       bindings
-        = <&macro_press &kp LCTRL &kp LALT &kp LSHFT &kp LGUI>
+        = <&macro_press &kp LCTRL &kp LALT &kp LGUI>
         , <&macro_param_1to1>
         , <&macro_tap &kp MACRO_PLACEHOLDER>
-        , <&macro_release &kp LGUI &kp LSHFT &kp LALT &kp LCTRL>;
+        , <&macro_release &kp LGUI &kp LALT &kp LCTRL>;
     };
   };
 };
