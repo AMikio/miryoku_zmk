@@ -124,8 +124,8 @@
 #define NIRI_OVW      &kp LG(F22)
 #define NIRI_WS_PREV  &kp LG(F23)
 #define NIRI_WS_NEXT  &kp LG(F24)
-#define NIRI_CONSUME  &niri_consume
-#define NIRI_EXPEL    &niri_expel
+#define NIRI_COE_L    &niri_consume
+#define NIRI_COE_R    &niri_expel
 #define NIRI_MON_NEXT &niri_mon_next
 #define NIRI_WIN_MON  &niri_win_mon
 #define NIRI_SHRINK   &niri_shrink
@@ -138,7 +138,7 @@
    &ht_to_kp U_GAME ESC   NIRI_WS1    NIRI_WS2    NIRI_WS3    NIRI_WS4    NIRI_WS5                               NIRI_WS6    NIRI_WS7    NIRI_WS8    NIRI_WS9    NIRI_OVW   &kp C_MUTE     \
    NIRI_WS_PREV           K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
    NIRI_WS_NEXT           K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   NIRI_CONSUME           K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_EXPEL     \
+   NIRI_COE_L             K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_COE_R     \
                                                   NIRI_SHRINK K32         K33        K34                 K35     K36         K37         NIRI_GROW
 
 #define MIRYOKU_LAYERMAPPING_NUM(                                              \
@@ -198,7 +198,7 @@
    XXX            NIRI_WS1    NIRI_WS2    NIRI_WS3    NIRI_WS4    NIRI_WS5               NIRI_WS6    NIRI_WS7    NIRI_WS8    NIRI_WS9    NIRI_OVW   &kp C_MUTE     \
    NIRI_WS_PREV   K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
    NIRI_WS_NEXT   K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   NIRI_CONSUME   K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_EXPEL     \
+   NIRI_COE_L     K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_COE_R     \
                                           NIRI_SHRINK K32         K33        K34                 K35     K36         K37         NIRI_GROW
 
 #define MIRYOKU_LAYERMAPPING_EXTRA  MIRYOKU_LAYERMAPPING_STANDARD
