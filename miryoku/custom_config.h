@@ -112,18 +112,18 @@
 
 // Niri WM bindings — F13-F24 for workspaces/nav; Hyper+Fx macros for the rest.
 // All are safe (no-ops) on systems that don't explicitly bind them.
-#define NIRI_WS1      &kp F13
-#define NIRI_WS2      &kp F14
-#define NIRI_WS3      &kp F15
-#define NIRI_WS4      &kp F16
-#define NIRI_WS5      &kp F17
-#define NIRI_WS6      &kp F18
-#define NIRI_WS7      &kp F19
-#define NIRI_WS8      &kp F20
-#define NIRI_WS9      &kp F21
-#define NIRI_OVW      &kp F22
-#define NIRI_WS_PREV  &kp F23
-#define NIRI_WS_NEXT  &kp F24
+#define NIRI_WS1      &kp LG(F13)
+#define NIRI_WS2      &kp LG(F14)
+#define NIRI_WS3      &kp LG(F15)
+#define NIRI_WS4      &kp LG(F16)
+#define NIRI_WS5      &kp LG(F17)
+#define NIRI_WS6      &kp LG(F18)
+#define NIRI_WS7      &kp LG(F19)
+#define NIRI_WS8      &kp LG(F20)
+#define NIRI_WS9      &kp LG(F21)
+#define NIRI_OVW      &kp LG(F22)
+#define NIRI_WS_PREV  &kp LG(F23)
+#define NIRI_WS_NEXT  &kp LG(F24)
 #define NIRI_CONSUME  &niri_consume
 #define NIRI_EXPEL    &niri_expel
 #define NIRI_MON_NEXT &niri_mon_next
