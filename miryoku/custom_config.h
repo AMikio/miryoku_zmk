@@ -110,15 +110,36 @@
 
 // clang-format off
 
+// Niri WM bindings — F13-F24 for workspaces/nav; Hyper+Fx macros for the rest.
+// All are safe (no-ops) on systems that don't explicitly bind them.
+#define NIRI_WS1      &kp F13
+#define NIRI_WS2      &kp F14
+#define NIRI_WS3      &kp F15
+#define NIRI_WS4      &kp F16
+#define NIRI_WS5      &kp F17
+#define NIRI_WS6      &kp F18
+#define NIRI_WS7      &kp F19
+#define NIRI_WS8      &kp F20
+#define NIRI_WS9      &kp F21
+#define NIRI_OVW      &kp F22
+#define NIRI_WS_PREV  &kp F23
+#define NIRI_WS_NEXT  &kp F24
+#define NIRI_CONSUME  &niri_consume
+#define NIRI_EXPEL    &niri_expel
+#define NIRI_MON_NEXT &niri_mon_next
+#define NIRI_WIN_MON  &niri_win_mon
+#define NIRI_SHRINK   &niri_shrink
+#define NIRI_GROW     &niri_grow
+
 #define MIRYOKU_LAYERMAPPING_BASE(                                             \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
                 N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
-   &ht_to_kp U_GAME ESC   &kp LA(A)   &kp LA(S)   &kp LA(D)   &kp LA(F)   &kp LA(M)                              &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(O)  &kp C_MUTE     \
-   &kp LG(PG_UP)          K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp LG(PG_DN)          K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   &kp LG(LBKT)           K20         K21         K22         K23         K24   &kp LG(BSLH)  &kp LG(LS(BSLH))  K25         K26         K27         K28         K29        &kp LG(RBKT)   \
-                                                  &kp LG(MINUS) K32       K33        K34                 K35     K36         K37         &kp LG(EQUAL)
+   &ht_to_kp U_GAME ESC   NIRI_WS1    NIRI_WS2    NIRI_WS3    NIRI_WS4    NIRI_WS5                               NIRI_WS6    NIRI_WS7    NIRI_WS8    NIRI_WS9    NIRI_OVW   &kp C_MUTE     \
+   NIRI_WS_PREV           K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   NIRI_WS_NEXT           K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
+   NIRI_CONSUME           K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_EXPEL     \
+                                                  NIRI_SHRINK K32         K33        K34                 K35     K36         K37         NIRI_GROW
 
 #define MIRYOKU_LAYERMAPPING_NUM(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
@@ -174,11 +195,11 @@
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
     K15, K16, K17, K18, K19, K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
                 N30, N31, K32, K33, K34, K35, K36, K37, N38, N39)              \
-   XXX            &kp LA(A)   &kp LA(S)   &kp LA(D)   &kp LA(F)   &kp LA(M)              &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(O)  &kp C_MUTE     \
-   &kp LG(PG_UP)  K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
-   &kp LG(PG_DN)  K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   &kp LG(LBKT)   K20         K21         K22         K23         K24   &kp LG(BSLH)  &kp LG(LS(BSLH))  K25         K26         K27         K28         K29        &kp LG(RBKT)   \
-                                          &kp LG(MINUS) K32       K33        K34                 K35     K36         K37         &kp LG(EQUAL)
+   XXX            NIRI_WS1    NIRI_WS2    NIRI_WS3    NIRI_WS4    NIRI_WS5               NIRI_WS6    NIRI_WS7    NIRI_WS8    NIRI_WS9    NIRI_OVW   &kp C_MUTE     \
+   NIRI_WS_PREV   K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
+   NIRI_WS_NEXT   K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
+   NIRI_CONSUME   K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_EXPEL     \
+                                          NIRI_SHRINK K32         K33        K34                 K35     K36         K37         NIRI_GROW
 
 #define MIRYOKU_LAYERMAPPING_EXTRA  MIRYOKU_LAYERMAPPING_STANDARD
 #define MIRYOKU_LAYERMAPPING_TAP    MIRYOKU_LAYERMAPPING_STANDARD
