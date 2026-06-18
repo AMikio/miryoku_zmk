@@ -79,7 +79,7 @@
         };
 
         shellHook = ''
-          export ZMK_DIR="''${ZMK_DIR:-$HOME/zmk}"
+          export ZMK_DIR="''${ZMK_DIR:-''${XDG_CACHE_HOME:-$HOME/.cache}/zmk}"
           export ZMK_CONFIG="''${ZMK_CONFIG:-$(realpath .)/config}"
 
           echo
