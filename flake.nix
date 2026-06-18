@@ -41,6 +41,11 @@
         rm -rf "$ZMK_DIR/app/build"
         echo "Done."
       '';
+      zmk-purge = pkgs.writeShellScriptBin "zmk-purge" ''
+        echo "Removing $ZMK_DIR (west workspace + all downloaded sources) ..."
+        rm -rf "$ZMK_DIR"
+        echo "Done. Run zmk-setup before building again."
+      '';
       zmk-build = pkgs.writeShellScriptBin "zmk-build" ''
         set -e
         side=''${1:-left}
@@ -73,6 +78,7 @@
           zmk-setup
           zmk-build
           zmk-clean
+          zmk-purge
         ];
 
         env = {
@@ -92,6 +98,7 @@
           echo "  zmk-setup               — one-time west workspace initialisation"
           echo "  zmk-build [left|right]  — build Lily58 firmware (default: left)"
           echo "  zmk-clean               — remove build artifacts"
+          echo "  zmk-purge               — remove entire ZMK workspace (frees disk space; requires zmk-setup to rebuild)"
           echo
         '';
       };
