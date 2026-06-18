@@ -3,9 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    zmk-src = {
+      url = "github:AMikio/zmk";
+      flake = false;
+    };
   };
 
-  outputs = {nixpkgs, ...}: let
+  outputs = {nixpkgs, zmk-src, ...}: let
     supportedSystems = [
       "x86_64-linux"
       "aarch64-linux"
@@ -21,6 +25,11 @@
     devShells = forEachSupportedSystem ({pkgs}: let
       zmk-setup = pkgs.writeShellScriptBin "zmk-setup" ''
         set -e
+        if [ ! -d "$ZMK_DIR" ]; then
+          echo "Seeding ZMK source into $ZMK_DIR from Nix store ..."
+          cp -r ${zmk-src} "$ZMK_DIR"
+          chmod -R u+w "$ZMK_DIR"
+        fi
         echo "Initialising west workspace in $ZMK_DIR ..."
         cd "$ZMK_DIR"
         west init -l app

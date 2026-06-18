@@ -18,7 +18,24 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "zmk-src": "zmk-src"
+      }
+    },
+    "zmk-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781496269,
+        "narHash": "sha256-eYTah20bgqP37TI/rL79oohkcja+UbQ/OCxhe88wcrU=",
+        "owner": "AMikio",
+        "repo": "zmk",
+        "rev": "bad4c6f2f11cd683a9597eaad119bec30097dcce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AMikio",
+        "repo": "zmk",
+        "type": "github"
       }
     }
   },
