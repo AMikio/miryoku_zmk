@@ -125,12 +125,12 @@
 #define NIRI_OVW      &niri_hyper O
 #define NIRI_WS_PREV  &niri_hyper P
 #define NIRI_WS_NEXT  &niri_hyper N
-#define NIRI_COE_L    &niri_hyper F1
-#define NIRI_COE_R    &niri_hyper F2
-#define NIRI_MON_NEXT &niri_hyper F3
-#define NIRI_WIN_MON  &niri_hyper F4
-#define NIRI_SHRINK   &niri_hyper F5
-#define NIRI_GROW     &niri_hyper F6
+#define NIRI_COE_L    &niri_hyper LBKT
+#define NIRI_COE_R    &niri_hyper RBKT
+#define NIRI_MON_NEXT &niri_hyper BSLH
+#define NIRI_WIN_MON  &niri_hyper SQT
+#define NIRI_SHRINK   &niri_hyper MINUS
+#define NIRI_GROW     &niri_hyper EQUAL
 
 #define MIRYOKU_LAYERMAPPING_BASE(                                             \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
