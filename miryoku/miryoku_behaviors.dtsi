@@ -43,8 +43,6 @@
       bindings = <&to>, <&kp>;
     };
 
-    // Single parameterised macro: sends Hyper (Ctrl+Alt+Shift+Super) + the
-    // given key. Safe on any system that doesn't explicitly bind Hyper combos.
     niri_hyper: niri_hyper {
       compatible = "zmk,behavior-macro-one-param";
       #binding-cells = <1>;
@@ -55,6 +53,31 @@
         , <&macro_param_1to1>
         , <&macro_tap &kp MACRO_PLACEHOLDER>
         , <&macro_release &kp LGUI &kp LALT &kp LCTRL>;
+    };
+
+    niri_fc_l: niri_fc_l {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper H>, <&niri_hyper LBKT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_fc_r: niri_fc_r {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper L>, <&niri_hyper RBKT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_shrink: niri_shrink {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper MINUS>, <&niri_hyper J>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_grow: niri_grow {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper EQUAL>, <&niri_hyper K>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
 };

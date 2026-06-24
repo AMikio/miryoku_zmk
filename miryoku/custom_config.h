@@ -110,9 +110,8 @@
 
 // clang-format off
 
-// Niri WM bindings — all send Hyper (Ctrl+Alt+Shift+Super) + a regular key
-// via the niri_hyper parameterised macro. Regular keys are never XKB-remapped,
-// so these are safe (no-ops) on any system without explicit Hyper bindings.
+// Niri WM bindings — all send Ctrl+Alt+Super + a regular key via niri_hyper.
+// Mod-morph variants switch action when Shift is held.
 #define NIRI_WS1      &niri_hyper N1
 #define NIRI_WS2      &niri_hyper N2
 #define NIRI_WS3      &niri_hyper N3
@@ -125,12 +124,12 @@
 #define NIRI_OVW      &niri_hyper O
 #define NIRI_WS_PREV  &niri_hyper P
 #define NIRI_WS_NEXT  &niri_hyper N
-#define NIRI_COE_L    &niri_hyper LBKT
-#define NIRI_COE_R    &niri_hyper RBKT
 #define NIRI_MON_NEXT &niri_hyper BSLH
 #define NIRI_WIN_MON  &niri_hyper SQT
-#define NIRI_SHRINK   &niri_hyper MINUS
-#define NIRI_GROW     &niri_hyper EQUAL
+#define NIRI_FC_L     &niri_fc_l
+#define NIRI_FC_R     &niri_fc_r
+#define NIRI_SHRINK   &niri_shrink
+#define NIRI_GROW     &niri_grow
 
 #define MIRYOKU_LAYERMAPPING_BASE(                                             \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
@@ -139,8 +138,8 @@
    &ht_to_kp U_GAME ESC   NIRI_WS1    NIRI_WS2    NIRI_WS3    NIRI_WS4    NIRI_WS5                               NIRI_WS6    NIRI_WS7    NIRI_WS8    NIRI_WS9    NIRI_OVW   &kp C_MUTE     \
    NIRI_WS_PREV           K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
    NIRI_WS_NEXT           K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   NIRI_COE_L             K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_COE_R     \
-                                                  NIRI_SHRINK K32         K33        K34                 K35     K36         K37         NIRI_GROW
+   NIRI_SHRINK            K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_GROW      \
+                                                  NIRI_FC_L   K32         K33        K34                 K35     K36         K37         NIRI_FC_R
 
 #define MIRYOKU_LAYERMAPPING_NUM(                                              \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K10, K11, K12, K13, K14, \
@@ -199,8 +198,8 @@
    XXX            NIRI_WS1    NIRI_WS2    NIRI_WS3    NIRI_WS4    NIRI_WS5               NIRI_WS6    NIRI_WS7    NIRI_WS8    NIRI_WS9    NIRI_OVW   &kp C_MUTE     \
    NIRI_WS_PREV   K00         K01         K02         K03         K04                                    K05         K06         K07         K08         K09        &kp C_VOL_UP   \
    NIRI_WS_NEXT   K10         K11         K12         K13         K14                                    K15         K16         K17         K18         K19        &kp C_VOL_DN   \
-   NIRI_COE_L     K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_COE_R     \
-                                          NIRI_SHRINK K32         K33        K34                 K35     K36         K37         NIRI_GROW
+   NIRI_SHRINK    K20         K21         K22         K23         K24   NIRI_MON_NEXT  NIRI_WIN_MON      K25         K26         K27         K28         K29        NIRI_GROW      \
+                                          NIRI_FC_L   K32         K33        K34                 K35     K36         K37         NIRI_FC_R
 
 #define MIRYOKU_LAYERMAPPING_EXTRA  MIRYOKU_LAYERMAPPING_STANDARD
 #define MIRYOKU_LAYERMAPPING_TAP    MIRYOKU_LAYERMAPPING_STANDARD
