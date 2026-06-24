@@ -9,7 +9,11 @@
     };
   };
 
-  outputs = {nixpkgs, zmk-src, ...}: let
+  outputs = {
+    nixpkgs,
+    zmk-src,
+    ...
+  }: let
     supportedSystems = [
       "x86_64-linux"
       "aarch64-linux"
@@ -59,6 +63,18 @@
         cp "$ZMK_DIR/app/build/zephyr/zmk.uf2" "$out_dir/lily58_''${side}.uf2"
         echo "Firmware: $out_dir/lily58_''${side}.uf2"
       '';
+      zmk-build-settings-reset = pkgs.writeShellScriptBin "zmk-build-settings-reset" ''
+        set -e
+        out_dir="$(pwd)"
+        echo "Building lily58 settings reset firmware..."
+        cd "$ZMK_DIR/app"
+        west build --pristine -b nice_nano/nrf52840 -- \
+          -DSHIELD="settings_reset" \
+          -DZMK_CONFIG="$ZMK_CONFIG" \
+          -DDTS_EXTRA_CPPFLAGS="-DMIRYOKU_KEYBOARD_LILY58"
+        cp "$ZMK_DIR/app/build/zephyr/zmk.uf2" "$out_dir/lily58_settings_reset.uf2"
+        echo "Firmware: $out_dir/lily58_settings_reset.uf2"
+      '';
     in {
       default = pkgs.mkShell {
         packages = with pkgs; [
@@ -79,6 +95,7 @@
           zmk-build
           zmk-clean
           zmk-purge
+          zmk-build-settings-reset
         ];
 
         env = {
