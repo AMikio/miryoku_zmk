@@ -79,5 +79,60 @@
       bindings = <&niri_hyper EQUAL>, <&niri_hyper K>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+
+    niri_ws1: niri_ws1 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N1>, <&niri_hyper Q>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws2: niri_ws2 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N2>, <&niri_hyper R>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws3: niri_ws3 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N3>, <&niri_hyper S>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws4: niri_ws4 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N4>, <&niri_hyper T>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws5: niri_ws5 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N5>, <&niri_hyper U>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws6: niri_ws6 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N6>, <&niri_hyper V>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws7: niri_ws7 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N7>, <&niri_hyper W>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws8: niri_ws8 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N8>, <&niri_hyper X>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    niri_ws9: niri_ws9 {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&niri_hyper N9>, <&niri_hyper Y>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
   };
 };

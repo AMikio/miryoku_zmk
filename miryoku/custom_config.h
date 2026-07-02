@@ -112,15 +112,15 @@
 
 // Niri WM bindings — all send Ctrl+Alt+Super + a regular key via niri_hyper.
 // Mod-morph variants switch action when Shift is held.
-#define NIRI_WS1      &niri_hyper N1
-#define NIRI_WS2      &niri_hyper N2
-#define NIRI_WS3      &niri_hyper N3
-#define NIRI_WS4      &niri_hyper N4
-#define NIRI_WS5      &niri_hyper N5
-#define NIRI_WS6      &niri_hyper N6
-#define NIRI_WS7      &niri_hyper N7
-#define NIRI_WS8      &niri_hyper N8
-#define NIRI_WS9      &niri_hyper N9
+#define NIRI_WS1      &niri_ws1
+#define NIRI_WS2      &niri_ws2
+#define NIRI_WS3      &niri_ws3
+#define NIRI_WS4      &niri_ws4
+#define NIRI_WS5      &niri_ws5
+#define NIRI_WS6      &niri_ws6
+#define NIRI_WS7      &niri_ws7
+#define NIRI_WS8      &niri_ws8
+#define NIRI_WS9      &niri_ws9
 #define NIRI_OVW      &niri_hyper O
 #define NIRI_WS_PREV  &niri_hyper P
 #define NIRI_WS_NEXT  &niri_hyper N
